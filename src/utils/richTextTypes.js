@@ -1,4 +1,5 @@
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+import Image from 'next/image';
 
 export const options = {
     renderNode: {
@@ -13,6 +14,22 @@ export const options = {
                 {children}
             </p>
         ),
+        [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            const { file, title } = node.data.target.fields;
+            const imageUrl = file.url;
+            const imageAlt = title || 'Contentful Image';
+
+            return (
+                <Image
+                    src={`https:${imageUrl}`}
+                    alt={imageAlt}
+                    width={800}
+                    height={600}
+                    className="rounded-[.5rem]"
+                    priority={false}
+                />
+            );
+        },
         // Add more blocks as needed
     },
 }

@@ -7,7 +7,7 @@ const Blog = ({ post }) => {
     return (
         <>
             <div className="py-8 md:py-10">
-                <div className="px-6 md:max-w-2xl lg:max-w-4xl 2xl:max-w-7xl mx-auto">
+                <div className="px-6 mt-14 md:max-w-2xl lg:max-w-4xl 2xl:max-w-7xl mx-auto">
                     <span className='text-sm text-gray-600 dark:text-gray-400'>{post.fields.createdAt}</span>
                     <h1 className='text-3xl font-extrabold dark:text-gray-300 mt-4'>{post.fields.title}</h1>
                     <div className="flex gap-2 mt-6">
