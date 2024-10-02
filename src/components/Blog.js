@@ -1,4 +1,5 @@
-import { ArrowLeft } from 'lucide-react'
+import { options } from '@/utils/richTextTypes'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Link from 'next/link'
 import React from 'react'
 
@@ -23,6 +24,9 @@ const Blog = ({ post }) => {
                     <p className='text-gray-600 text-base dark:text-gray-400 mt-8'>{post.fields.content}</p>
                     <div className="mt-12 dark:border dark:border-gray-800 rounded-2xl">
                         <img src={`https:${post.fields.image.fields.file.url}`} alt="" className='rounded-2xl' />
+                    </div>
+                    <div className="prose dark:prose-dark mt-8 text-gray-600 dark:text-gray-400">
+                        {documentToReactComponents(post.fields.description, options)}
                     </div>
                 </div>
             </div>
