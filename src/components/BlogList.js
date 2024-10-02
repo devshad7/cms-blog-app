@@ -41,7 +41,7 @@ export default function BlogList() {
                 {posts.length > 0 ? (
                     posts.map((post) => (
                         <Link href={`/blog/${post.fields.slug}`} key={post.sys.id}>
-                            <div className="hover:bg-slate-50/70 px-3 md:px-8 py-4 md:mt-6 rounded-2xl border-l border-sky-100 dark:border-gray-800 dark:hover:border-slate-800/50 hover:border-slate-50/70 hover:dark:bg-slate-800/50">
+                            <div className="hover:bg-slate-50/70 px-3 md:px-8 py-4 md:mt-6 rounded-2xl border-l border-sky-100 dark:border-[#222324] dark:hover:border-slate-800/50 hover:border-slate-50/70 hover:dark:bg-[#222324]">
                                 <h1 className='text-base font-semibold tracking-tight text-slate-900 dark:text-gray-300'>{post.fields.title}</h1>
                                 <div className="mt-2 mb-2 md:mb-4 md:pr-10">
                                     <p className='font-light text-sm md:text-base text-slate-900 dark:text-gray-400'>{post.fields.content.substring(0,250)}...</p>
