@@ -18,12 +18,14 @@
     "contentful": "^11.0.3",
     "lucide-react": "^0.446.0",
     "next": "14.2.13",
+    "next-pwa": "^5.6.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/next-pwa": "^5.6.9",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "postcss": "^8",
